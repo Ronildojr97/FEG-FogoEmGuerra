@@ -10,7 +10,6 @@ public class Inimigos : MonoBehaviour {
         if(other.tag.Equals("Bala"))
         {
             vida -= BalaSystem.dano;
-            Destroy(other);
 
             if (vida <= 0)
             {

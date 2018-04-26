@@ -17,14 +17,10 @@ public class BalaSystem : MonoBehaviour {
         Destroy(gameObject, 1.5F);
 	}
 
-    /*
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Enemies")
-        {
-            //Destroy(other, 1F);
+    
+    private void OnTriggerEnter(Collider other) { 
+        
             Destroy(gameObject);
-        }
     }
-    */
+    
 }
