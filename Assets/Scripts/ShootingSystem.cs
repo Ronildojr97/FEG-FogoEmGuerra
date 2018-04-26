@@ -6,11 +6,12 @@ public class ShootingSystem : MonoBehaviour {
     public Transform bala;
     public Transform target;
 
-	void Update () {
-    
+    private void FixedUpdate()
+    {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+          //  Debug.Log(bala.tag);
             Instantiate(bala, target.position, target.rotation);
         }
-	}
+    }
 }

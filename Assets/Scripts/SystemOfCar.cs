@@ -89,7 +89,7 @@ public class SystemOfCar : MonoBehaviour {
         int maxVelociade = 0;
         speed = GetRigidbody.velocity.magnitude * 3.6f;
         maxVelociade = Mathf.FloorToInt(speed * 1.2F);
-        Debug.Log("Velociade em KMH: "+maxVelociade);
+       // Debug.Log("Velociade em KMH: "+maxVelociade);
         return maxVelociade;
     }
 }

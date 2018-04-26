@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BalaSystem : MonoBehaviour {
     public float speed;
+    public int dano;
 
     private void Start()
     {
@@ -16,12 +17,14 @@ public class BalaSystem : MonoBehaviour {
         Destroy(gameObject, 1.5F);
 	}
 
+    /*
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "enemies")
+        if(other.tag == "Enemies")
         {
-            other.gameObject.SetActive(false);
-           // Destroy(other, 1F);
+            //Destroy(other, 1F);
+            Destroy(gameObject);
         }
     }
+    */
 }
