@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class BalaSystem : MonoBehaviour {
     public float speed;
-    public int dano;
+
+    [Range(1.0F,10.0F)]
+    public float dano = 5.5F;
 
     private void Start()
     {
