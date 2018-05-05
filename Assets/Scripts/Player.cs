@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-    public float vida;
-    public BalaSystem BalaSystem;
+    public static float vida;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag.Equals("Bala"))
         {
-            vida -= BalaSystem.dano;
-
+            //vida -= BalaSystem.dano;
+            vida -= BalaSystem.danoMaximo;
             if (vida <= 0)
             {
                 Destroy(gameObject);

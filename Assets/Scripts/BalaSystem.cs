@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class BalaSystem : MonoBehaviour {
     public float speed;
+    public float dano;
+    public static float danoMaximo = 0F;
 
-    [Range(1.0F,10.0F)]
-    public float dano = 5.5F;
-
-    private void Start()
+    private void Awake()
     {
-        
+        danoMaximo = dano; // calcular o dano por velocidade   
     }
-
     // Update is called once per frame
     void Update () {
         transform.Translate(0,0,speed*Time.deltaTime);

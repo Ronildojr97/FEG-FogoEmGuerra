@@ -7,11 +7,13 @@ public class ShootingSystem : MonoBehaviour {
     public Transform target;
     private bool isPodeAtirar = true;
     public float breakTime;
+    public AudioSource tiro;
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Space) && isPodeAtirar)
+        if (Input.GetAxisRaw("Fire1") != 0 && isPodeAtirar)
         {
+            tiro.Play();
             StartCoroutine(time());
             Instantiate(bala, target.position, target.rotation);
             isPodeAtirar = false;
