@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ShootingSystem : MonoBehaviour {
+    public bool isEnemies = false;
     public Transform bala;
     public Transform target;
     private bool isPodeAtirar = true;
@@ -11,13 +12,26 @@ public class ShootingSystem : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if (Input.GetAxisRaw("Fire1") != 0 && isPodeAtirar)
+        if (!isEnemies)
         {
-            tiro.Play();
-            StartCoroutine(time());
-            Instantiate(bala, target.position, target.rotation);
-            isPodeAtirar = false;
+            if (Input.GetAxisRaw("Fire1") != 0 && isPodeAtirar)
+            {
+                tiro.Play();
+                StartCoroutine(time());
+                Instantiate(bala, target.position, target.rotation);
+                isPodeAtirar = false;
 
+            }
+        }
+        else
+        {
+            if (isPodeAtirar)
+            {
+                tiro.Play();
+                StartCoroutine(time());
+                Instantiate(bala, target.position, target.rotation);
+                isPodeAtirar = false;
+            }
         }
     }
 

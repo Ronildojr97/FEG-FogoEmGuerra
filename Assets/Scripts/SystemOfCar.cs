@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class SystemOfCar : MonoBehaviour {
@@ -16,11 +17,16 @@ public class SystemOfCar : MonoBehaviour {
     [Header("CenterOfMass")]
     public Vector3 centerOfMass;
     public Rigidbody GetRigidbody;
-
+    [Header("Velocimetro")]
+    public Image ponteiro;
+    Vector3 startAngulo;
+    public float anguloFactor = -3.5F;
     private void Start()
     {
         GetRigidbody.GetComponent<Rigidbody>();
-        GetRigidbody.centerOfMass = centerOfMass;   
+        GetRigidbody.centerOfMass = centerOfMass;
+        // velocimetro
+        startAngulo = ponteiro.transform.eulerAngles;
     }
 
     void Update () {
@@ -85,11 +91,12 @@ public class SystemOfCar : MonoBehaviour {
     // calcular Kmhd
     public int velocidade()
     {
-        float speed = 0f;
-        int maxVelociade = 0;
+        float speed = 0;
+        int speedInt = 0;
         speed = GetRigidbody.velocity.magnitude * 3.6f;
-        maxVelociade = Mathf.FloorToInt(speed * 1.2F);
-       // Debug.Log("Velociade em KMH: "+maxVelociade);
-        return maxVelociade;
+        speedInt = Mathf.FloorToInt(speed);
+        ponteiro.rectTransform.eulerAngles = new Vector3(startAngulo.x, startAngulo.y, startAngulo.z + speed * anguloFactor);
+  //      Debug.Log("Velociade em KMH: " + speedInt);
+        return speedInt;
     }
 }

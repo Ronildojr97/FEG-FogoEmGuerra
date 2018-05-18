@@ -235,6 +235,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BalaSystem.cs" />
+    <Compile Include="Assets\Scripts\FaceRotation.cs" />
     <Compile Include="Assets\Scripts\Inimigos.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\SCC_Camera.cs" />
