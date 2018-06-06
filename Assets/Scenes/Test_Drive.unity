@@ -206,7 +206,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 18863011}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74d744443387cef47a5ece4c38605add, type: 3}
   m_Name: 
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 42908565}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c343f0451aa830542aa04a5f37224e32, type: 3}
   m_Name: 
@@ -400,7 +400,7 @@ Transform:
   m_Children:
   - {fileID: 648980660}
   m_Father: {fileID: 276433739}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &111687717
 GameObject:
@@ -671,10 +671,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 86673232}
-  - {fileID: 1080414517}
-  - {fileID: 1428691833}
   - {fileID: 2067482147}
+  - {fileID: 86673232}
+  - {fileID: 1428691833}
+  - {fileID: 1080414517}
   m_Father: {fileID: 2116987809}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1876,7 +1876,7 @@ Transform:
   m_Children:
   - {fileID: 1570404139}
   m_Father: {fileID: 276433739}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1254323397
 GameObject:
@@ -2081,6 +2081,7 @@ MonoBehaviour:
   vida: 100
   textVida: {fileID: 1849395380}
   sliderVida: {fileID: 53825060}
+  m_Rigidbody: {fileID: 1275245150}
 --- !u!1 &1379322728
 GameObject:
   m_ObjectHideFlags: 0
@@ -3582,7 +3583,7 @@ Transform:
   m_Children:
   - {fileID: 985649225}
   m_Father: {fileID: 276433739}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2114224679
 GameObject:
@@ -3740,14 +3741,14 @@ MonoBehaviour:
   - {fileID: 356717495}
   - {fileID: 1395953922}
   roda:
-  - {fileID: 86673232}
-  - {fileID: 1080414517}
-  - {fileID: 1428691833}
   - {fileID: 2067482147}
+  - {fileID: 86673232}
+  - {fileID: 1428691833}
+  - {fileID: 1080414517}
   MaxVelocity: 20
   MaxTorque: 400
   MaxAngle: 20
-  BreakTorque: 200
+  BreakTorque: 1
   centerOfMass: {x: 0, y: -0.3, z: -0.3}
   GetRigidbody: {fileID: 2116987808}
   ponteiro: {fileID: 1832724697}
@@ -3764,8 +3765,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 100
-  textureBoxVida: {fileID: 2800000, guid: 4d8ff97dfb49262459aff51e665b1682, type: 3}
-  textureVida: {fileID: 2800000, guid: d347280c7457fbc4d9ae0eb8dd441ba3, type: 3}
 --- !u!1 &2130220032
 GameObject:
   m_ObjectHideFlags: 0
