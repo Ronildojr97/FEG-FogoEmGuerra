@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-    private float vidaMax;
+    public float vidaMax;
     public float vida;
 
     private void Awake()

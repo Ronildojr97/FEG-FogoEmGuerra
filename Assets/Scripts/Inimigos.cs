@@ -22,10 +22,10 @@ public class Inimigos : MonoBehaviour {
         MaxVida = vida;
         textVida.text = MaxVida + "/" + vida.ToString();
     }
-
-    private void Update()
+    private void FixedUpdate()
     {
         m_Rigidbody.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+
     }
 
     private void OnTriggerEnter(Collider other)

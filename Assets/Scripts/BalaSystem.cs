@@ -15,12 +15,11 @@ public class BalaSystem : MonoBehaviour {
     void Update () {
         transform.Translate(0,0,speed*Time.deltaTime);
         Destroy(gameObject, 1.5F);
-	}
+    }
 
-    
+
     private void OnTriggerEnter(Collider other) { 
-        
-            Destroy(gameObject);
+        Destroy(gameObject);
     }
     
 }

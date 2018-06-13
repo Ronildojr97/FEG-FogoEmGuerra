@@ -16,7 +16,7 @@ public class ShootingSystem : MonoBehaviour {
         {
             if (Input.GetAxisRaw("Fire1") != 0 && isPodeAtirar)
             {
-                tiro.Play();
+               // tiro.Play();
                 StartCoroutine(time());
                 Instantiate(bala, target.position, target.rotation);
                 isPodeAtirar = false;
@@ -27,7 +27,7 @@ public class ShootingSystem : MonoBehaviour {
         {
             if (isPodeAtirar)
             {
-                tiro.Play();
+               // tiro.Play();
                 StartCoroutine(time());
                 Instantiate(bala, target.position, target.rotation);
                 isPodeAtirar = false;
