@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
+    public float vidaMax;
     public float vida;
-    public BalaSystem BalaSystem;
+
+    private void Awake()
+    {
+        vidaMax = vida;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag.Equals("Bala"))
         {
-            vida -= BalaSystem.dano;
-
+            //vida -= BalaSystem.dano;
+            Debug.Log(vida);
             if (vida <= 0)
             {
                 Destroy(gameObject);
@@ -23,9 +28,5 @@ public class Player : MonoBehaviour {
                 Destroy(gameObject);
         }
     }
-    void OnGUI()
-    {
-        GUI.Box(new Rect(0, 0, 100, 30), vida+"/100");
 
-    }
 }
