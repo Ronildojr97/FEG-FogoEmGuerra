@@ -300,11 +300,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\BalaSystem.cs" />
+    <Compile Include="Assets\Scripts\Enemies.cs" />
     <Compile Include="Assets\Scripts\FaceRotation.cs" />
-    <Compile Include="Assets\Scripts\Inimigos.cs" />
+    <Compile Include="Assets\Scripts\MusicControl.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\SCC_Camera.cs" />
+    <Compile Include="Assets\Scripts\Shoot.cs" />
     <Compile Include="Assets\Scripts\ShootingSystem.cs" />
     <Compile Include="Assets\Scripts\SystemOfCar.cs" />
   </ItemGroup>

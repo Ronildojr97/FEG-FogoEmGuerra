@@ -16,7 +16,6 @@ public class Player : MonoBehaviour {
         if (other.tag.Equals("Bala"))
         {
             //vida -= BalaSystem.dano;
-            vida -= BalaSystem.danoMaximo;
             Debug.Log(vida);
             if (vida <= 0)
             {
